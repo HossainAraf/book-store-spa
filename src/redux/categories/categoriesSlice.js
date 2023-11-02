@@ -7,7 +7,6 @@ const initialCategoriesState = {
   status: 'Under construction',
 };
 
-
 // CREATE A SLICE USING createSlice
 const categoriesSlice = createSlice({
   name: 'category',
