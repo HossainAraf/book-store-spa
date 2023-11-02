@@ -1,0 +1,5 @@
+
+// STATE
+const initialBooksState = {
+  books: [],
+};
