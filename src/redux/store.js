@@ -8,4 +8,6 @@ const reducer = combineReducers({
   categories: categoriesReducer,
 });
 
-
+const store = configureStore({
+  reducer: reducer,
+});
