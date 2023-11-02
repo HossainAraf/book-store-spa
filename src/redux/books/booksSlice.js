@@ -10,3 +10,16 @@ const initialBooksState = {
 const bookSlice = createSlice({
   name: 'book',
   initialState: initialBooksState,
+  reducers: {
+    addBook: (state, action) => {
+      const book = {
+        id: nanoid(),
+        text: action.payload,
+      };
+      state.books.push(book);
+    },
+    removeBook: (state, action) => {
+      state.books = state.books.filter((book) => book.id !== action.payload);
+    },
+  },
+});
