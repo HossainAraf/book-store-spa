@@ -23,3 +23,7 @@ const bookSlice = createSlice({
     },
   },
 });
+
+// EXPORT ACTIONS & REDUCER
+export const { addBook, removeBook } = bookSlice.actions;
+export default bookSlice.reducer;
