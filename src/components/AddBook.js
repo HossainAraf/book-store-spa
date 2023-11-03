@@ -23,6 +23,9 @@ const AddBook = () => (
     e.preventDefault();
     const id = nanoid();
 
+    // DISPATCH ACTION TO ADD BOOK
+    dispatch(addBook({ item_id=id, title, author, category:''}));
+    
   <form>
     <h4>Add New Book</h4>
     <input
