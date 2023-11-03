@@ -1,5 +1,5 @@
 // IMPORTS
-import { createSlice, nanoid } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 // STATE
 const initialBooksState = [
@@ -29,11 +29,7 @@ const bookSlice = createSlice({
   initialState: initialBooksState,
   reducers: {
     addBook: (state, action) => {
-      const book = {
-        id: nanoid(),
-        text: action.payload,
-      };
-      state.books.push(book);
+      state.push(action.payload);
     },
     removeBook: (state, action) => {
       state.books = state.books.filter((book) => book.id !== action.payload);
