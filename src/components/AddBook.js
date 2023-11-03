@@ -53,7 +53,9 @@ const AddBook = () => {
         value={author}
         onChange={onAuthorChanged}
       />
-      <AddBookButton />
+      <AddBookButton type="submit">
+        ADD BOOK
+      </AddBookButton>
     </form>
   );
 };
