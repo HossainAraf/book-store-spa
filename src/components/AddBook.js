@@ -5,8 +5,13 @@ import { nanoid } from '@reduxjs/toolkit';
 import { addBook } from '../redux/books/booksSlice';
 import { AddBookButton } from './Button';
 
-// COMPONENTS
+// COMPONENT
 const AddBook = () => (
+  const dispatch = useDispatch();
+  // COMPONENT STATE
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  
   <form>
     <h4>Add New Book</h4>
     <input
