@@ -25,7 +25,12 @@ const AddBook = () => (
 
     // DISPATCH ACTION TO ADD BOOK
     dispatch(addBook({ item_id=id, title, author, category:''}));
-    
+
+    // RESET STATE
+    setTitle('');
+    setAuthor('');
+  };
+  
   <form>
     <h4>Add New Book</h4>
     <input
