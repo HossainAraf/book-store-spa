@@ -1,28 +1,36 @@
 // Individual Book component
-//IMPORTS
+// IMPORTS
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import { RemoveBookButton } from './Button';
 
-const Book = ({ title, author, category }) => (
-  <div className="book">
-    <h3>
-      Title:
-      {title}
-    </h3>
-    <p>
-      Author:
-      {author}
-    </p>
-    <p>
-      Category:
-      {category}
-    </p>
-    <button type="button">Delete</button>
-  </div>
-);
+const Book = ({
+  id, title, author, category,
+}) => {
+  const dispatch = useDispatch();
+  const handleRemoveBook = () => {
+    dispatch(removeBook(id));
+  };
+  return (
+    <div className="book">
+      <h3>
+        Title:
+        {title}
+      </h3>
+      <p>
+        Author:
+        {author}
+      </p>
+      <p>
+        Category:
+        {category}
+      </p>
+      <RemoveBookButton type="button" onClick={handleRemoveBook}>Delete</RemoveBookButton>
+    </div>
+  );
+};
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,
