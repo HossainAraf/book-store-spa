@@ -11,7 +11,18 @@ const AddBook = () => (
   // COMPONENT STATE
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  
+
+  // EVENT HANDLERS
+  const onTitleChanged = (e) => {
+    setTitle(e.target.value)
+  };
+  const onAuthorChanged = (e) => {
+    setAuthor(e.target.value)
+  };
+  const submitBook = (e) => {
+    e.preventDefault();
+    const id = nanoid();
+
   <form>
     <h4>Add New Book</h4>
     <input
