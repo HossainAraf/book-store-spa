@@ -18,27 +18,13 @@ const removeBook = createAsyncThunk('RemoveBook', async (ITEM_ID) => {
   const response = await axios.delete(`${API_URL}/${ITEM_ID}`);
   return response.data === 'The book was deleted successfully!' ? ITEM_ID : null;
 });
+
 // STATE
-const initialBooksState = [
-  {
-    item_id: 'item1',
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
-  },
-  {
-    item_id: 'item2',
-    title: 'Anna Karenina',
-    author: 'Leo Tolstoy',
-    category: 'Fiction',
-  },
-  {
-    item_id: 'item3',
-    title: 'The Selfish Gene',
-    author: 'Richard Dawkins',
-    category: 'Nonfiction',
-  },
-];
+const initialState = {
+  books: [],
+  error: '',
+  loading: 'idle',
+};
 
 // CREATE A SLICE USING createSlice
 const bookSlice = createSlice({
