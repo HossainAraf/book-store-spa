@@ -37,6 +37,10 @@ nav ul li a {
   margin-right: 0.1%;
 }
 
+.a-book {
+  color: #8d8d8d;
+}
+
 #nav-categories {
   width: 6.563rem;
   height: 1rem;
@@ -44,6 +48,10 @@ nav ul li a {
   opacity: 0.5;
   font-size: 0.813rem;
   letter-spacing: 1.9px;
+  color: #a2a2a2;
+}
+
+.a-categories {
   color: #a2a2a2;
 }
 
