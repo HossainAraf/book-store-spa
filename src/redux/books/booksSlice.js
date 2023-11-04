@@ -14,6 +14,10 @@ const addBook = createAsyncThunk('AddBook', async (book) => {
   return response.data === 'Created' ? book : null;
 });
 
+const removeBook = createAsyncThunk('RemoveBook', async (ITEM_ID) => {
+  const response = await axios.delete(`${API_URL}/${ITEM_ID}`);
+  return response.data === 'The book was deleted successfully!' ? ITEM_ID : null;
+});
 // STATE
 const initialBooksState = [
   {
