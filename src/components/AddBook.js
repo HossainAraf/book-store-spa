@@ -37,25 +37,30 @@ const AddBook = () => {
   return (
     <form onSubmit={submitBook}>
       <h4>Add New Book</h4>
-      <input
-        type="text"
-        placeholder="Add Title ..."
-        name="title"
-        className="add-title"
-        value={title}
-        onChange={onTitleChanged}
-      />
-      <input
-        type="text"
-        placeholder="Add Author"
-        name="author"
-        className="add-author"
-        value={author}
-        onChange={onAuthorChanged}
-      />
-      <AddBookButton onClick={submitBook} type="submit">
-        ADD BOOK
-      </AddBookButton>
+      <div className="actions-wrapper">
+        <input
+          type="text"
+          placeholder="Add Title ..."
+          name="title"
+          className="add-title"
+          value={title}
+          onChange={onTitleChanged}
+        />
+        <div className="input-author-wrapper">
+          <input
+            type="text"
+            placeholder="Add Author"
+            name="author"
+            className="add-author"
+            value={author}
+            onChange={onAuthorChanged}
+          />
+        </div>
+        <AddBookButton onClick={submitBook} type="submit">
+          ADD BOOK
+        </AddBookButton>
+      </div>
+
     </form>
   );
 };
