@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import { RemoveBookButton } from './Button';
+import '../styles/book.css';
+
 
 const Book = ({
   id, title, author, category,
