@@ -10,6 +10,11 @@ const BooksPage = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books.books);
 
+  // FETCH BOOKS ON COMPONENT MOUNT
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+  
   return (
     <div>
       <ul className="books">
