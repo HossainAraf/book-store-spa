@@ -9,6 +9,11 @@ const fetchBooks = createAsyncThunk('DisplayBooks', async () => {
   return response.data;
 });
 
+const addBook = createAsyncThunk('AddBook', async (book) => {
+  const response = await axios.post(API_URL, book);
+  return response.data === 'Created' ? book : null;
+});
+
 // STATE
 const initialBooksState = [
   {
