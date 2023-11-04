@@ -4,8 +4,12 @@ import { fetchBooks } from '../redux/books/booksSlice';
 import Book from './Book';
 import AddBook from './AddBook';
 
-const BooksList = () => {
-  const books = useSelector((state) => state.books);
+// COMPONENT
+const BooksPage = () => {
+  // HOOKS
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books);
+
   return (
     <div>
       <ul className="books">
