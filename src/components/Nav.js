@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import '../styles/nav.css';
 
 const Nav = () => (
   <nav>
@@ -8,6 +11,9 @@ const Nav = () => (
       <li><Link to="/">BOOKS</Link></li>
       <li><Link to="/categories">CATEGORIES</Link></li>
     </ul>
+    <div id="user-icon">
+      <FontAwesomeIcon icon={faUser} style={{ color: '#0290ff' }} />
+    </div>
   </nav>
 );
 
