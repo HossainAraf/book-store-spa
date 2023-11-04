@@ -14,13 +14,14 @@ const BooksPage = () => {
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
-  
+
+  // RENDERING BOOKS
   return (
-    <div>
+    <div className="books-container">
       <ul className="books">
         {books.map((book) => (
           <Book
-            key={book.id}
+            key={book.item_id}
             id={book.item_id}
             title={book.title}
             author={book.author}
@@ -28,9 +29,10 @@ const BooksPage = () => {
           />
         ))}
       </ul>
+      <div className="hr" />
       <AddBook />
     </div>
   );
 };
 
-export default BooksList;
+export default BooksPage;
