@@ -8,8 +8,8 @@ const Nav = () => (
   <nav>
     <h1>Bookstore CMS</h1>
     <ul className={Nav.ul}>
-      <li><Link to="/">BOOKS</Link></li>
-      <li><Link to="/categories">CATEGORIES</Link></li>
+      <li id="nav-book"><Link to="/">BOOKS</Link></li>
+      <li id="nav-categories"><Link to="/categories">CATEGORIES</Link></li>
     </ul>
     <div id="user-icon">
       <FontAwesomeIcon icon={faUser} style={{ color: '#0290ff' }} />
