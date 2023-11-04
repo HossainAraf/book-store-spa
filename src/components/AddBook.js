@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
 import { addBook } from '../redux/books/booksSlice';
 import { AddBookButton } from './Button';
+import '../styles/addBook.css';
 
 // COMPONENT
 const AddBook = () => {
