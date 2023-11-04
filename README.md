@@ -92,9 +92,6 @@ Must-Install-Project-with-the-Following-Programmes:
 - LinkedIn: <a href="https://linkedin.com/in/md-arafat-hossain-111403275"> Md. Arafat Hossain </a>
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-- use Redux in React components.
-- connect to API
 - styling
 
 
@@ -141,7 +138,7 @@ Can I contribute to this project?\*\*
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.txt) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
